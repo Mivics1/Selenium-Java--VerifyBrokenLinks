@@ -1,36 +1,35 @@
 package com.MavenTestPackage;
 
-
-import java.util.ArrayList;
-import java.util.List;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class VerifyBrokenLinkFireFox {
-	public static WebDriver driver;
-
-	List<WebElement> activeLinks = new ArrayList<WebElement>();
+	int validLinks = 0;
+	int invalidLinks = 0;
 	
-	@BeforeTest
-	public void openBrowser() {
-		System.setProperty("webdriver", "‪‪..\\geckodriver.exe");
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.get("https://www.google.com/");
-	}
-	
-	@Test
-	public void getLinks() {
-		System.out.println("The Web App title is: "+driver.getTitle());
-	}
-	
-	@AfterTest
-	public void tearDown() {
-		driver.close();
+	public void verifyBrokenLinks(String linkUrl) throws IOException {
+		
+		try {
+			URL url = new URL(linkUrl);
+			HttpURLConnection httpUrlConnect = (HttpURLConnection) url.openConnection();
+			httpUrlConnect.connect();
+			
+			int resCode = httpUrlConnect.getResponseCode();
+			
+			if (resCode >= 400) {
+				System.out.println(url+" : is a broken link"+"---"+httpUrlConnect.getResponseMessage()+"---"+httpUrlConnect.getResponseCode());
+				invalidLinks=invalidLinks + 1;
+			} else {
+				System.out.println(url+" : is a broken link"+"---"+httpUrlConnect.getResponseMessage()+"---"+httpUrlConnect.getResponseCode());
+				validLinks = validLinks +1;
+			}
+			httpUrlConnect.disconnect();
+		} catch(MalformedURLException e){
+			e.printStackTrace();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
