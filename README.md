@@ -1,7 +1,7 @@
 <h1>Selenium Java Test Script: To verify broken links using a URL</h1>
 
 <h2>Description</h2>
-Automating the verification of broken links using Selenium Java Test Script.
+Automating the verification of broken links using Selenium Java Test Script with Chrome broswer, Firefox Driver and HtmlUnitDriver.
 <br />
 
 
@@ -13,6 +13,7 @@ Automating the verification of broken links using Selenium Java Test Script.
 - <b>Selenium</b>
 - <b>Chrome and Gecko Webdriver</b>
 - <b>HTTPURLCONNECTION class</b>
+- <b>HtmlUnitDriver</b>
 
 <h2>Environments Used </h2>
 
