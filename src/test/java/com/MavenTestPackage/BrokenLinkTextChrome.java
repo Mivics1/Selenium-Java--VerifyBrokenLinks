@@ -1,5 +1,6 @@
 package com.MavenTestPackage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,12 +50,15 @@ public class BrokenLinkTextChrome {
 	
 	//
 	@Test
-	public void VerifyBrokenLinks() {
+	public void verifyBrokenLinksChrome() throws IOException {
 		VerifyBrokenLinkChrome obj = new VerifyBrokenLinkChrome();
 		for(int num=0; num<activeLinks.size();num++) {
 			WebElement ele = activeLinks.get(num);
 			String url = ele.getAttribute("href");
+			obj.verifyBrokenLinks(url);
 		}
+		System.err.println("Total Valid Links: "+obj.validLinks);
+		System.err.println("Total Invalid Links: "+obj.invalidLinks);
 	}
 	@AfterTest
 	public void tearDown() {
