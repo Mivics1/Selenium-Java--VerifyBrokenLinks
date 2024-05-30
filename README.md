@@ -8,8 +8,9 @@ Automating the verification of broken links using Selenium Java Test Script.
 <h2>Languages and Utilities Used</h2>
 
 - <b>Maven Project</b>
-- <b>.TestNG Framework</b> 
+- <b>TestNG Framework</b> 
 - <b>Java Programming Language</b>
+- <b>Selenium</b>
 - <b>Chrome and Gecko Webdriver</b>
 - <b>HTTPURLCONNECTION class</b>
 
