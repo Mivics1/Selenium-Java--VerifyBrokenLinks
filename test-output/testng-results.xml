@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-30T13:57:12 WAT" name="Default suite" finished-at="2024-05-30T13:57:34 WAT" duration-ms="21406">
+  <suite started-at="2024-05-30T14:53:56 WAT" name="Default suite" finished-at="2024-05-30T14:54:24 WAT" duration-ms="28001">
     <groups>
     </groups>
-    <test started-at="2024-05-30T13:57:12 WAT" name="Default test" finished-at="2024-05-30T13:57:34 WAT" duration-ms="21406">
-      <class name="com.MavenTestPackage.BrokenLinkTextChrome">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.MavenTestPackage.BrokenLinkTextChrome@5460cf3a]" started-at="2024-05-30T13:57:12 WAT" name="openBrowser" finished-at="2024-05-30T13:57:17 WAT" duration-ms="4666" status="PASS">
+    <test started-at="2024-05-30T14:53:56 WAT" name="Default test" finished-at="2024-05-30T14:54:24 WAT" duration-ms="28001">
+      <class name="com.Headless.BrokenLinkTextHeadless">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.Headless.BrokenLinkTextHeadless@3fc9504b]" started-at="2024-05-30T14:53:56 WAT" name="openBrowser" finished-at="2024-05-30T14:54:01 WAT" duration-ms="5065" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="getLinks()[pri:0, instance:com.MavenTestPackage.BrokenLinkTextChrome@5460cf3a]" started-at="2024-05-30T13:57:17 WAT" name="getLinks" finished-at="2024-05-30T13:57:18 WAT" duration-ms="923" status="PASS">
+        <test-method signature="getLinks()[pri:0, instance:com.Headless.BrokenLinkTextHeadless@3fc9504b]" started-at="2024-05-30T14:54:01 WAT" name="getLinks" finished-at="2024-05-30T14:54:01 WAT" duration-ms="59" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLinks -->
-        <test-method signature="verifyBrokenLinksChrome()[pri:0, instance:com.MavenTestPackage.BrokenLinkTextChrome@5460cf3a]" started-at="2024-05-30T13:57:18 WAT" name="verifyBrokenLinksChrome" finished-at="2024-05-30T13:57:33 WAT" duration-ms="15390" status="PASS">
+        <test-method signature="verifyBrokenLinksHeadless()[pri:0, instance:com.Headless.BrokenLinkTextHeadless@3fc9504b]" started-at="2024-05-30T14:54:01 WAT" name="verifyBrokenLinksHeadless" finished-at="2024-05-30T14:54:24 WAT" duration-ms="22685" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyBrokenLinksChrome -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.MavenTestPackage.BrokenLinkTextChrome@5460cf3a]" started-at="2024-05-30T13:57:33 WAT" name="tearDown" finished-at="2024-05-30T13:57:34 WAT" duration-ms="324" status="PASS">
+        </test-method> <!-- verifyBrokenLinksHeadless -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Headless.BrokenLinkTextHeadless@3fc9504b]" started-at="2024-05-30T14:54:24 WAT" name="tearDown" finished-at="2024-05-30T14:54:24 WAT" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.MavenTestPackage.BrokenLinkTextChrome -->
+      </class> <!-- com.Headless.BrokenLinkTextHeadless -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
